@@ -26,28 +26,10 @@ CREATE TABLE IF NOT EXISTS `business` (
   `document_number` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `name` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
   `tradename` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  `ubigee` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   `address` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  `country_code` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
-  `user_sol` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `password_sol` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `certificate` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `password_certificate` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `process_type` varchar(1) COLLATE utf8_unicode_ci NOT NULL,
   `logo` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
   `phone` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `email` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `invoice_url` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `bg_header` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `bg_sidebar` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `bg_sidebar_nav_dropdown_toggle` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `bg_sidebar_nav_dropdown_items` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `author` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `url_cpe` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `master_key` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `email_backup` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `code_establishment` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `validation_price` int(11) DEFAULT NULL,
   `state` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
@@ -55,8 +37,8 @@ CREATE TABLE IF NOT EXISTS `business` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- Volcando datos para la tabla bd_apuesta_total.business: ~1 rows (aproximadamente)
-INSERT INTO `business` (`id_company`, `document_type`, `document_number`, `name`, `tradename`, `ubigee`, `address`, `country_code`, `user_sol`, `password_sol`, `certificate`, `password_certificate`, `process_type`, `logo`, `phone`, `email`, `invoice_url`, `bg_header`, `bg_sidebar`, `bg_sidebar_nav_dropdown_toggle`, `bg_sidebar_nav_dropdown_items`, `author`, `url_cpe`, `master_key`, `email_backup`, `code_establishment`, `validation_price`, `state`, `created_at`, `updated_at`) VALUES
-	(1, '6', '20100066603', 'Tu Empresa SR', 'Tu Empresa SR', '230101', 'tacna', 'PE', 'MODDATOS', 'moddatos', 'firmabeta.pfx', '123456', '3', 'company/tu-empresa-sr-1623284805.jpg', '-', '-', 'https://demosisventav1.reyfact.com/facturador/', '#423C6A', '#423C6A', '#423C6A', '#4A46A4', '0', NULL, '12345', NULL, '0000', 0, 1, '2021-10-07 01:53:35', '2021-10-07 01:53:36');
+INSERT INTO `business` (`id_company`, `document_type`, `document_number`, `name`, `tradename`, `address`, `logo`, `phone`, `email`, `state`, `created_at`, `updated_at`) VALUES
+	(1, '6', '20100066603', 'Tu Empresa SR', 'Tu Empresa SR', 'tacna', 'company/tu-empresa-sr-1623284805.jpg', '-', '-', 1, '2021-10-07 01:53:35', '2021-10-07 01:53:36');
 
 -- Volcando estructura para tabla bd_apuesta_total.clients
 CREATE TABLE IF NOT EXISTS `clients` (
